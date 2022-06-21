@@ -1,0 +1,26 @@
+<div fxLayout.xs="column" class="roomContainer">
+  <mat-card class="example-card">
+    <mat-card-title>Room Name</mat-card-title>
+    <app-input-change-name></app-input-change-name>
+    <mat-divider inset></mat-divider>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="goIn()">
+        Go chat!
+      </button>
+      <button mat-raised-button color="warn" (click)="deleteRoom()">
+        Delet Room!
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<ng-template #noRoom>
+  <mat-card class="example-card">
+    <mat-card-title>No available room up to now</mat-card-title>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</ng-template>
